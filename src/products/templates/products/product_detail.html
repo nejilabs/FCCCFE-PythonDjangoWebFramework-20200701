@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class='container'>
+	
+    <h1 class="display-4">{{ object.title }} (¥{{object.price}})
+		
+			<a class="btn btn-primary btn-lg" href="{% url 'products:product-update' object.id %}">Update</a>
+			<a class="btn btn-danger btn-lg" href="{% url 'products:product-delete' object.id %}">Delete</a>
+			<a class="btn btn-secondary btn-lg"href="{% url 'products:product-list' %}">Back</a>
+		</h1>
+    <hr class="my-4">
+		<p class="lead">
+			{% if object.description != None and object.description != '' %}
+				{{object.description}}
+			{% else %}
+				Coming Soon
+			{% endif %}
+		</p>
+  </div>
+</div>
+{% endblock %}
