@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ object.title }}</h1>
-<p>{{ object.content }}</p>
+<h1 class="display-4">{{ object.title }}</h1>
+
+<a class="btn btn-primary" href="{% url 'blog:article-update' object.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'blog:article-delete' object.id %}">Delete</a>
+<a class="btn btn-secondary"href="{% url 'blog:article-list' %}">Back</a>
+
+<hr class="my-4">
+
+<p class="lead">
+  {% if object.content != None and object.content != '' %}
+    {{ object.content }}
+  {% else %}
+    Coming Soon
+  {% endif %}
+</p>
+
+
 {% endblock %}

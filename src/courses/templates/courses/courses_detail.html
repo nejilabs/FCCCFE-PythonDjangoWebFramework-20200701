@@ -1,19 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="display-4">{{ object.title }} (¥{{object.price}})</h1>
+    <h1 class="display-4">{{ object.title }}</h1>
 
 			<a class="btn btn-primary" href="{% url 'products:product-update' object.id %}">Update</a>
 			<a class="btn btn-danger" href="{% url 'products:product-delete' object.id %}">Delete</a>
 			<a class="btn btn-secondary"href="{% url 'products:product-list' %}">Back</a>
 
     <hr class="my-4">
-		<p class="lead">
-			{% if object.description != None and object.description != '' %}
-				{{object.description}}
-			{% else %}
-				Coming Soon
-			{% endif %}
-		</p>
 
 {% endblock %}

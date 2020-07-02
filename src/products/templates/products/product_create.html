@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<h2>Add New Product</h2>
+<hr class="my-4">
+
   <form action='.' method='POST'>{%csrf_token%}
     {{form.as_p}}
-    <input type='submit' value='Save'/>
+    <input type='submit' value='Save' class="btn btn-primary"/>
+    <a href="{% url 'products:product-list' %}" class="btn btn-secondary">Back</a>
   </form>
-  
-  <a href="{% url 'products:product-list'%}">Back</a>
-{% endblock %} 
+{% endblock %}

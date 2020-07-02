@@ -40,7 +40,7 @@ class ArticleDetailView(DetailView):
 
 
 class ArticleUpdateView(UpdateView):
-    template_name = 'blog/article_create.html'
+    template_name = 'blog/article_update.html'
     form_class = ArticleModelForm
     queryset = Article.objects.all()
 

@@ -1,9 +1,11 @@
 {%extends 'base.html'%}
 
 {%block content%}
+<h2>Do you want to delete the post '{{object.title}}'?</h2>
+<hr class="my-4">
+
 <form action='.' method='POST'>{% csrf_token %}
-  <h1>Do you want to delete the post '{{object.title}}'?</h1>
-  <p><input type='submit' value='Yes' />
-  <a href'../'>Cancel</a></p>
+  <input class="btn btn-danger" type='submit' value='Delete' />
+  <a class="btn btn-secondary"href="{% url 'blog:article-detail' object.id %}">Back</a>
 </form>
 {%endblock%}

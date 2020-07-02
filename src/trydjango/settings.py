@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
     # Own Apps
     'products',
     'pages',
-    'blog'
+    'blog',
+    'courses'
 ]
 
 MIDDLEWARE = [
