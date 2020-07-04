@@ -1,12 +1,5 @@
 from django.urls import path
 from courses.views import (
-
-    #courses_detail_view,
-    #courses_delete_view,
-    #courses_list_view,
-    #courses_create_view,
-    #courses_update_view,
-
     CourseView
 )
 

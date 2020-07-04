@@ -8,6 +8,7 @@ def product_create_view(request):
     if form.is_valid():
         form.save()
         form = ProductForm()
+        return redirect('../')
     context = {
         'form': form
     }
