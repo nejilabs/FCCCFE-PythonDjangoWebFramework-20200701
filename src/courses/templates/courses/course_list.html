@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+    <h1 class="display-4">List of Courses</h1>
+    <a class="btn btn-primary" href="{% url 'courses:course-create'%}" role="button">Add Course</a>
+    <a class="btn btn-secondary" href="{% url 'home'%}" role="button">Back</a>
+    <hr class="my-4">
+
+    {% for instance in object_list %}
+      <a class="btn btn-light btn-block" style="text-align:left" href='{{instance.get_absolute_url}}'>
+        <h5>{{instance.title}}</h5>
+      </a>
+    {% endfor %}
+
+{% endblock %}

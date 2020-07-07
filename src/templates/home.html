@@ -2,9 +2,10 @@
 
 {% block content %}
   <h1 class="display-4">Hello {{request.user}}!</h1>
-    
+
   <hr class="my-4">
-    
+
   <a class="btn btn-primary btn-lg" href="{% url 'products:product-list'%}" role="button">Products</a>
   <a class="btn btn-primary btn-lg" href="{% url 'blog:article-list'%}" role="button">Blogs</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'courses:course-list' %}" role="button">Courses</a>
 {% endblock %}

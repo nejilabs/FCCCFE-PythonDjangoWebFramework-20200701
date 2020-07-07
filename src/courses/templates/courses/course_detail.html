@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="display-4">{{object.id}} - {{ object.title }}</h1>
+
+			<a class="btn btn-primary" href="{% url 'courses:course-update' object.id%}">Update</a>
+			<a class="btn btn-danger" href="{% url 'courses:course-delete' object.id%}">Delete</a>
+			<a class="btn btn-secondary" href="{% url 'courses:course-list' %}">Back</a>
+
+    <hr class="my-4">
+
+{% endblock %}
