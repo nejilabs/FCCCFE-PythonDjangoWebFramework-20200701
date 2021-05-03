@@ -1,4 +1,4 @@
-# FCCCodingForEntrepreneurs-PythonDjangoWebFramework-20200701
+# FCCCFE-PythonDjangoWebFramework-20200701
 
 Learn the Python Django framework with this free full course. Django is an extremely popular and fully featured server-side web framework, written in Python. Django allows you to quickly create web apps.
 
